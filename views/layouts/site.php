@@ -23,7 +23,7 @@ $this->registerLinkTag(['rel' => 'icon', 'type' => 'image/x-icon', 'href' => Yii
 
 <?php $this->beginPage(); ?>
 
-<!DOCTYPE html>
+
 
 <html lang="<?= Yii::$app->language ?>">
 

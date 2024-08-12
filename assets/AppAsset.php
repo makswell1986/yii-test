@@ -31,8 +31,8 @@ class AppAsset extends AssetBundle
         'js/bootstrap.js',
         'https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/owl.carousel.min.js',
         'js/open_web.js',
-        'google_courusel.js',
-        'google_map.js',
+        'js/google_courusel.js',
+        'js/google_map.js',
         'https://maps.googleapis.com/maps/api/js?key=AIzaSyCh39n5U-4IoWpsVGUHWdqB6puEkhRLdmI&callback=myMap',
     ];
     public $depends = [

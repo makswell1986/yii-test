@@ -1,5 +1,3 @@
-<script>
-    /** google_map js **/
 
     function myMap() {
       var mapProp = {
@@ -8,4 +6,4 @@
       };
       var map = new google.maps.Map(document.getElementById("googleMap"), mapProp);
     }
-  </script>
+  
