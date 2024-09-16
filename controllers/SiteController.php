@@ -2,6 +2,7 @@
 
 namespace app\controllers;
 
+use app\models\RegistrForm;
 use Yii;
 use yii\filters\AccessControl;
 use yii\web\Controller;
@@ -9,6 +10,7 @@ use yii\web\Response;
 use yii\filters\VerbFilter;
 use app\models\LoginForm;
 use app\models\ContactForm;
+use app\models\User;
 
 class SiteController extends Controller
 {
@@ -75,8 +77,11 @@ class SiteController extends Controller
             return $this->goHome();
         }
 
+      
+
         $model = new LoginForm();
         if ($model->load(Yii::$app->request->post()) && $model->login()) {
+            
             return $this->goBack();
         }
 
@@ -125,4 +130,36 @@ class SiteController extends Controller
     {
         return $this->render('about');
     }
+
+
+    public function actionRegister()
+    {   
+      
+
+        $model = new RegistrForm();
+        
+        if ($model->load(Yii::$app->request->post()) && $model->validate()){
+            
+            $user = new User();
+            $user->username=$model->username;
+            $user->password=md5($model->password);
+            $user->last_name=$model->last_name;
+            $user->first_name=$model->first_name;
+       
+          if ($user->save()){
+           
+           Yii::$app->user->login($user);
+            return $this->goHome();
+          }
+
+        }
+        return $this->render('register',[
+            'model' => $model
+        ]);
+    }
+
+protected function debug($arr){
+    echo '<pre>'.print_r($arr,true).'</pre>';
+}
+
 }

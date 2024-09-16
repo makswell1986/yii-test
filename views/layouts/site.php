@@ -38,33 +38,51 @@ $this->registerLinkTag(['rel' => 'icon', 'type' => 'image/x-icon', 'href' => Yii
 
 <body>
 <?php $this->beginBody() ?>
-  <div class="hero_area">
+  
     <!-- header section strats -->
     <header class="header_section">
       <div class="container">
         <div class="header_nav">
           <a class="navbar-brand brand_desktop" href="index.html">
-            <img src="images/logo.png" alt="" />
+            <img src="/images/logo.png" alt="" />
           </a>
           <div class="main_nav">
             <div class="top_nav">
               <ul class=" ">
                 <li class="">
                   <a class="" href="">
-                    <img src="images/telephone.png" alt="" />
-                    <span> +01 1234567890</span>
+                 <? if (Yii::$app->user->isGuest){  ?>
+                    <span><?= Html::a('Login', ['site/login'], ['class' => '']) ?></span>
+                    
+                 <? } else { ?>
+                  <span> <?= Html::beginForm(['/site/logout'])
+                    . Html::submitButton(
+                        'Logout (' . Yii::$app->user->identity->username . ')',
+                        ['class' => 'nav-link btn btn-link logout']
+                    )
+                    . Html::endForm()   ?>                      
+                  
+                </span>
+
+                 <?}?>
+                    
+                    </a>
+                </li>
+                <li class="">
+                  <a class="" href="/site/register">
+                    
+                    <span>Register</span>
                   </a>
                 </li>
                 <li class="">
                   <a class="" href="">
-                    <img src="images/mail.png" alt="" />
-                    <span>demo@gmail.com</span>
-                  </a>
-                </li>
-                <li class="">
-                  <a class="" href="">
-                    <img src="images/location.png" alt="" />
+                    <img src="/images/location.png" alt="" />
                     <span>Den mark Loram ipusum</span>
+                  </a>
+                </li>
+                <li class="">
+                  <a class="" href="">
+                    <span><?= $this->render('language') ?></span>
                   </a>
                 </li>
               </ul>
@@ -72,7 +90,7 @@ $this->registerLinkTag(['rel' => 'icon', 'type' => 'image/x-icon', 'href' => Yii
             <div class="bottom_nav">
               <nav class="navbar navbar-expand-lg custom_nav-container">
                 <a class="navbar-brand brand_mobile" href="index.html">
-                  <img src="images/logo.png" alt="" />
+                  <img src="/images/logo.png" alt="" />
                 </a>
                 <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
                   <span class="navbar-toggler-icon"></span>
@@ -113,19 +131,19 @@ $this->registerLinkTag(['rel' => 'icon', 'type' => 'image/x-icon', 'href' => Yii
               <section class=" footer_section ">
                 <div class="social_box">
                   <a href="#">
-                    <img src="images/facebook.png" alt="">
+                    <img src="/images/facebook.png" alt="">
                   </a>
                   <a href="#">
-                    <img src="images/twitter.png" alt="">
+                    <img src="/images/twitter.png" alt="">
                   </a>
                   <a href="#">
-                    <img src="images/linkedin.png" alt="">
+                    <img src="/images/linkedin.png" alt="">
                   </a>
                   <a href="#">
-                    <img src="images/instagram.png" alt="">
+                    <img src="/images/instagram.png" alt="">
                   </a>
                   <a href="#">
-                    <img src="images/youtube.png" alt="">
+                    <img src="/images/youtube.png" alt="">
                   </a>
                 </div>
                 <p>
@@ -135,11 +153,8 @@ $this->registerLinkTag(['rel' => 'icon', 'type' => 'image/x-icon', 'href' => Yii
               </section>
               <!-- footer section -->
 
-            </div>
-            <div class="col-md-6  px-0">
-              <div class="img-box">
-                <img src="images/footer-img.jpg" alt="">
-              </div>
+        
+            
             </div>
           </div>
         </div>

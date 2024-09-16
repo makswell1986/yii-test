@@ -9,6 +9,7 @@ $this->title = Yii::$app->name;
         <div class="row">
           <div class="col-md-2 offset-md-2">
             <div class="slider_heading">
+            
               <h2>
                 Bo <span>xer</span>
               </h2>
@@ -102,6 +103,7 @@ $this->title = Yii::$app->name;
                     </h2>
                   </div>
                   <p>
+                  <?= Yii::t('app', 'Welcome');?>
                     iusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris iusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquipnisi ut aliquipiusmod tempor incididunt ut labore et
                   </p>
                   <hr />
@@ -143,10 +145,10 @@ $this->title = Yii::$app->name;
                 <div class="item">
                   <div class="box">
                     <div class="img-box">
-                      <img src="images/c1.jpg" alt="">
+                      <img src="/images/c1.jpg" alt="">
                       <div class="detail-box">
                         <button>
-                          <img src="images/play-icon.png" alt="">
+                          <img src="/images/play-icon.png" alt="">
                         </button>
                         <h2>
                           Boxing
@@ -163,10 +165,10 @@ $this->title = Yii::$app->name;
                 <div class="item">
                   <div class="box">
                     <div class="img-box">
-                      <img src="images/c2.jpg" alt="">
+                      <img src="/images/c2.jpg" alt="">
                       <div class="detail-box">
                         <button>
-                          <img src="images/play-icon.png" alt="">
+                          <img src="/images/play-icon.png" alt="">
                         </button>
                         <h2>
                           Boxing
@@ -183,10 +185,10 @@ $this->title = Yii::$app->name;
                 <div class="item">
                   <div class="box">
                     <div class="img-box">
-                      <img src="images/c1.jpg" alt="">
+                      <img src="/images/c1.jpg" alt="">
                       <div class="detail-box">
                         <button>
-                          <img src="images/play-icon.png" alt="">
+                          <img src="/images/play-icon.png" alt="">
                         </button>
                         <h2>
                           Boxing
@@ -203,10 +205,10 @@ $this->title = Yii::$app->name;
                 <div class="item">
                   <div class="box">
                     <div class="img-box">
-                      <img src="images/c2.jpg" alt="">
+                      <img src="/images/c2.jpg" alt="">
                       <div class="detail-box">
                         <button>
-                          <img src="images/play-icon.png" alt="">
+                          <img src="/images/play-icon.png" alt="">
                         </button>
                         <h2>
                           Boxing
@@ -251,7 +253,7 @@ $this->title = Yii::$app->name;
         <div class="col-md-6 pl-0">
           <div class="box b1">
             <div class="img-box">
-              <img src="images/b1.jpg" alt="">
+              <img src="/images/b1.jpg" alt="">
             </div>
             <div class="row">
               <div class="col-lg-8 col-md-10 ml-auto">
@@ -279,7 +281,7 @@ $this->title = Yii::$app->name;
         <div class="col-md-6 pr-0">
           <div class="box b2">
             <div class="img-box">
-              <img src="images/b2.jpg" alt="">
+              <img src="/images/b2.jpg" alt="">
             </div>
             <div class="row">
               <div class="col-lg-8 col-md-10 mr-auto">
@@ -331,7 +333,7 @@ $this->title = Yii::$app->name;
                   <div class="item">
                     <div class="box">
                       <div class="img-box">
-                        <img src="images/client1.png" alt="" />
+                        <img src="/images/client1.png" alt="" />
                       </div>
                       <div class="detail-box">
                         <h4>
@@ -339,14 +341,14 @@ $this->title = Yii::$app->name;
                         </h4>
                         <p>
                           It is a long established fact that a reader will be distracted by the readable content of a page when looking at its layout. The point of using Lorem Ipsum It is a long established fact that a reader will be distracted by the readable content of a page when looking at its layout. The point of using Lorem Ipsum </p>
-                        <img src="images/quote.png" alt="" />
+                        <img src="/images/quote.png" alt="" />
                       </div>
                     </div>
                   </div>
                   <div class="item">
                     <div class="box">
                       <div class="img-box">
-                        <img src="images/client2.png" alt="" />
+                        <img src="/images/client2.png" alt="" />
                       </div>
                       <div class="detail-box">
                         <h4>
@@ -354,14 +356,14 @@ $this->title = Yii::$app->name;
                         </h4>
                         <p>
                           It is a long established fact that a reader will be distracted by the readable content of a page when looking at its layout. The point of using Lorem Ipsum It is a long established fact that a reader will be distracted by the readable content of a page when looking at its layout. The point of using Lorem Ipsum </p>
-                        <img src="images/quote.png" alt="" />
+                        <img src="/images/quote.png" alt="" />
                       </div>
                     </div>
                   </div>
                   <div class="item">
                     <div class="box">
                       <div class="img-box">
-                        <img src="images/client1.png" alt="" />
+                        <img src="/images/client1.png" alt="" />
                       </div>
                       <div class="detail-box">
                         <h4>
@@ -369,14 +371,14 @@ $this->title = Yii::$app->name;
                         </h4>
                         <p>
                           It is a long established fact that a reader will be distracted by the readable content of a page when looking at its layout. The point of using Lorem Ipsum It is a long established fact that a reader will be distracted by the readable content of a page when looking at its layout. The point of using Lorem Ipsum </p>
-                        <img src="images/quote.png" alt="" />
+                        <img src="/images/quote.png" alt="" />
                       </div>
                     </div>
                   </div>
                   <div class="item">
                     <div class="box">
                       <div class="img-box">
-                        <img src="images/client2.png" alt="" />
+                        <img src="/images/client2.png" alt="" />
                       </div>
                       <div class="detail-box">
                         <h4>
@@ -384,7 +386,7 @@ $this->title = Yii::$app->name;
                         </h4>
                         <p>
                           It is a long established fact that a reader will be distracted by the readable content of a page when looking at its layout. The point of using Lorem Ipsum It is a long established fact that a reader will be distracted by the readable content of a page when looking at its layout. The point of using Lorem Ipsum </p>
-                        <img src="images/quote.png" alt="" />
+                        <img src="/images/quote.png" alt="" />
                       </div>
                     </div>
                   </div>

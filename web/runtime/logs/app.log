@@ -1,0 +1,74 @@
+2024-08-27 17:09:32 [127.0.0.1][-][-][error][yii\web\HttpException:404] yii\base\InvalidRouteException: Unable to resolve the request "site/index". in D:\openserver\OpenServer\domains\yii-test\vendor\yiisoft\yii2\base\Module.php:561
+Stack trace:
+#0 D:\openserver\OpenServer\domains\yii-test\vendor\yiisoft\yii2\web\Application.php(103): yii\base\Module->runAction()
+#1 D:\openserver\OpenServer\domains\yii-test\vendor\yiisoft\yii2\base\Application.php(384): yii\web\Application->handleRequest()
+#2 D:\openserver\OpenServer\domains\yii-test\web\index.php(12): yii\base\Application->run()
+#3 {main}
+
+Next yii\web\NotFoundHttpException: Страница не найдена. in D:\openserver\OpenServer\domains\yii-test\vendor\yiisoft\yii2\web\Application.php:115
+Stack trace:
+#0 D:\openserver\OpenServer\domains\yii-test\vendor\yiisoft\yii2\base\Application.php(384): yii\web\Application->handleRequest()
+#1 D:\openserver\OpenServer\domains\yii-test\web\index.php(12): yii\base\Application->run()
+#2 {main}
+2024-08-27 17:09:32 [127.0.0.1][-][-][info][application] $_GET = []
+
+$_POST = []
+
+$_FILES = []
+
+$_COOKIE = [
+    '_csrf' => '7c9fb47fbbfe293b54418d78e7c9f5d85aa7e36ecf267bb69ec862cf785c64d6a:2:{i:0;s:5:\"_csrf\";i:1;s:32:\"X5Jm9qvR2SGVRF-ZTDfBSciJCxTPPdMx\";}'
+    'PHPSESSID' => '17av4afj1q4kit8ha6r1jg2j23l0p26i'
+    '_language' => '7eac6c91e2645eda06d9ecceb8700239570ec03a1c1679093a3ea0982f35750da:2:{i:0;s:9:\"_language\";i:1;s:2:\"ru\";}'
+]
+
+$_SESSION = [
+    '__flash' => []
+    '_language' => 'ru'
+]
+
+$_SERVER = [
+    'REDIRECT_REDIRECT_STATUS' => '200'
+    'REDIRECT_STATUS' => '200'
+    'HTTP_HOST' => 'yii-test'
+    'HTTP_CONNECTION' => 'keep-alive'
+    'HTTP_PRAGMA' => 'no-cache'
+    'HTTP_CACHE_CONTROL' => 'no-cache'
+    'HTTP_UPGRADE_INSECURE_REQUESTS' => '1'
+    'HTTP_USER_AGENT' => 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/128.0.0.0 Safari/537.36'
+    'HTTP_ACCEPT' => 'text/html,application/xhtml+xml,application/xml;q=0.9,image/avif,image/webp,image/apng,*/*;q=0.8,application/signed-exchange;v=b3;q=0.7'
+    'HTTP_REFERER' => 'http://yii-test/en/site/index'
+    'HTTP_ACCEPT_ENCODING' => 'gzip, deflate'
+    'HTTP_ACCEPT_LANGUAGE' => 'ru-RU,ru;q=0.9,en-US;q=0.8,en;q=0.7'
+    'HTTP_COOKIE' => '_csrf=7c9fb47fbbfe293b54418d78e7c9f5d85aa7e36ecf267bb69ec862cf785c64d6a%3A2%3A%7Bi%3A0%3Bs%3A5%3A%22_csrf%22%3Bi%3A1%3Bs%3A32%3A%22X5Jm9qvR2SGVRF-ZTDfBSciJCxTPPdMx%22%3B%7D; PHPSESSID=17av4afj1q4kit8ha6r1jg2j23l0p26i; _language=7eac6c91e2645eda06d9ecceb8700239570ec03a1c1679093a3ea0982f35750da%3A2%3A%7Bi%3A0%3Bs%3A9%3A%22_language%22%3Bi%3A1%3Bs%3A2%3A%22ru%22%3B%7D'
+    'PATH' => 'd:\\openserver\\openserver\\modules\\php\\PHP_7.4\\ext;d:\\openserver\\openserver\\modules\\php\\PHP_7.4\\pear;d:\\openserver\\openserver\\modules\\php\\PHP_7.4\\pear\\bin;d:\\openserver\\openserver\\modules\\php\\PHP_7.4;d:\\openserver\\openserver\\modules\\wget\\bin;d:\\openserver\\openserver\\modules\\database\\MariaDB-10.3\\bin;d:\\openserver\\openserver\\modules\\http\\Apache_2.4-PHP_7.2-7.4\\bin;d:\\openserver\\openserver\\modules\\http\\Apache_2.4-PHP_7.2-7.4;C:\\WINDOWS\\system32;C:\\WINDOWS;C:\\WINDOWS\\system32\\Wbem;C:\\WINDOWS\\SysWOW64'
+    'SystemRoot' => 'C:\\WINDOWS'
+    'COMSPEC' => 'C:\\WINDOWS\\system32\\cmd.exe'
+    'PATHEXT' => '.COM;.EXE;.BAT;.CMD;.VBS;.VBE;.JS;.JSE;.WSF;.WSH;.MSC'
+    'WINDIR' => 'C:\\WINDOWS'
+    'SERVER_SIGNATURE' => ''
+    'SERVER_SOFTWARE' => 'Apache'
+    'SERVER_NAME' => 'yii-test'
+    'SERVER_ADDR' => '127.0.0.1'
+    'SERVER_PORT' => '80'
+    'REMOTE_ADDR' => '127.0.0.1'
+    'DOCUMENT_ROOT' => 'D:/openserver/OpenServer/domains/yii-test'
+    'REQUEST_SCHEME' => 'http'
+    'CONTEXT_PREFIX' => ''
+    'CONTEXT_DOCUMENT_ROOT' => 'D:/openserver/OpenServer/domains/yii-test'
+    'SERVER_ADMIN' => '[no address given]'
+    'SCRIPT_FILENAME' => 'D:/openserver/OpenServer/domains/yii-test/web/index.php'
+    'REMOTE_PORT' => '65206'
+    'REDIRECT_URL' => '/web/ru/site/index'
+    'GATEWAY_INTERFACE' => 'CGI/1.1'
+    'SERVER_PROTOCOL' => 'HTTP/1.1'
+    'REQUEST_METHOD' => 'GET'
+    'QUERY_STRING' => ''
+    'REQUEST_URI' => '/ru/site/index'
+    'SCRIPT_NAME' => '/web/index.php'
+    'PHP_SELF' => '/web/index.php'
+    'REQUEST_TIME_FLOAT' => 1724767772.784
+    'REQUEST_TIME' => 1724767772
+    'argv' => []
+    'argc' => 0
+]

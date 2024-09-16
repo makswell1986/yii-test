@@ -20,6 +20,53 @@ use Yii;
 class User extends \yii\db\ActiveRecord implements \yii\web\IdentityInterface
 {
 
+    
+    /**
+     * {@inheritdoc}
+     */
+    public static function tableName()
+    {
+        return 'user';
+    }
+
+    /**
+     * {@inheritdoc}
+     */
+    public function rules()
+    {
+        return [
+            [['last_name', 'first_name', 'username', 'password'], 'required', 'message'=>'Required'],
+            ['username','validatePassword','message'=>'This username has aleready exists'],
+            /*[['created_at', 'updated_at'], 'safe'],*/
+            [['last_name', 'first_name'], 'string', 'max' => 64],
+            [['username'], 'string', 'max' => 15],
+            [['password'], 'string', 'min' => 6],
+            /*[['password', 'auth_key', 'access_token'], 'string', 'max' => 32],*/
+        ];
+    }
+
+    /**
+     * {@inheritdoc}
+     */
+    public function attributeLabels()
+    {
+        return [
+            'id' => 'ID',
+            'last_name' => 'Last Name',
+            'first_name' => 'First Name',
+            'username' => 'Username',
+            'password' => 'Password',
+            'auth_key' => 'Auth Key',
+            'access_token' => 'Access Token',
+            'created_at' => 'Created At',
+            'updated_at' => 'Updated At',
+        ];
+    }
+
+
+
+
+    
 
 
     /**

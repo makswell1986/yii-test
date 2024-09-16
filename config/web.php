@@ -6,18 +6,45 @@ $db = require __DIR__ . '/db.php';
 $config = [
     'id' => 'basic',
     'basePath' => dirname(__DIR__),
+    
     'bootstrap' => ['log'],
     'layout'=>'site',
     'name'=>'Boxer',
-    'language'=>'ru',
+    'language'=>'en',
+    'sourceLanguage'=>'en',
+    
+
+
+
     'aliases' => [
         '@bower' => '@vendor/bower-asset',
         '@npm'   => '@vendor/npm-asset',
     ],
     'components' => [
+
+    'authManager' => [
+                'class' => 'yii\rbac\DbManager',
+            ],
+
+    'i18n' => [
+        'translations' => [
+            'app' => [
+                'class' => 'yii\i18n\DbMessageSource',
+                //'sourceLanguage' => 'en',
+                
+            ],
+        ],
+    ],
+
+  
+
         'request' => [
             // !!! insert a secret key in the following (if it is empty) - this is required by cookie validation
             'cookieValidationKey' => '1AKJyFLbfV50WohdwMuqpzwak9wH01T7',
+            'parsers' => [
+                'application/json' => 'yii\web\JsonParser',
+            ],
+            'baseUrl'=>'',
         ],
         'cache' => [
             'class' => 'yii\caching\FileCache',
@@ -45,14 +72,19 @@ $config = [
             ],
         ],
         'db' => $db,
-        /*
+        
         'urlManager' => [
             'enablePrettyUrl' => true,
             'showScriptName' => false,
+            'class'=>'codemix\localeurls\UrlManager',
+            'languages'=>['en','ru'],
+            'enableDefaultLanguageUrlCode'=>true,
             'rules' => [
+                '<action:[-a-zA-Z0-9_]+>' => 'site/<action>',
+                ['class' => 'yii\rest\UrlRule', 'controller' => 'Api'],
             ],
         ],
-        */
+       
     ],
     'params' => $params,
 ];
